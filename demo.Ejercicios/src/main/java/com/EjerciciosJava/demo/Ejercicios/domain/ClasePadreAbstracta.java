@@ -32,10 +32,16 @@ public abstract class ClasePadreAbstracta {
             } while (bandera == 0);
 
             if(seleccion==1){
+                ClasePadreAbstracta mensajero = new ClaseHijaConsulta();
+                mensajero.Transacciones();
 
             }else if(seleccion==2){
+                ClasePadreAbstracta mensajero = new ClaseHijaRetiro();
+                mensajero.Transacciones();
 
             }else if(seleccion==3){
+                ClasePadreAbstracta mensajero = new ClaseHijaDeposito();
+                mensajero.Transacciones();
 
             }else if(seleccion==4){
                 System.out.println("------------------------");
