@@ -2,7 +2,7 @@ package com.EjerciciosJava.demo.Ejercicios.domain;
 
 import java.util.Scanner;
 
-public class ClasePadreAbstracta {
+public abstract class ClasePadreAbstracta {
     protected int transacciones;
     protected int retiro;
     protected int deposito;
@@ -48,6 +48,31 @@ public class ClasePadreAbstracta {
 
     }
 
+    //Metodo para solicitar cantidad de retiro
+
+    public void Retiro(){
+        this.retiro= entrada.nextInt();
+
+    }
+
+    //Metodo para solicitar deposito
+
+    public void Deposito(){
+        this.deposito = entrada.nextInt();
+    }
+
+    //Metodo Abstracto
+
+    public abstract  void Transacciones();
+
+    //Metodos setter y getter
 
 
+    public static int getSaldo() {
+        return saldo;
+    }
+
+    public static void setSaldo(int saldo) {
+        ClasePadreAbstracta.saldo = saldo;
+    }
 }
