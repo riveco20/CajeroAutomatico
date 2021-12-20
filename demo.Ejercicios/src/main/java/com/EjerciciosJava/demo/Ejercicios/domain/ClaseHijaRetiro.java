@@ -4,9 +4,9 @@ public class ClaseHijaRetiro extends ClasePadreAbstracta {
 
 
     @Override
-    public void Transacciones() {
+    public void transacciones() {
         System.out.print("Cuanto deseas retirar: " );
-        Retiro();
+        retiro();
         if(retiro <= getSaldo()){
             transacciones= getSaldo();
             setSaldo(transacciones-retiro);

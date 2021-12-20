@@ -1,6 +1,7 @@
 package com.EjerciciosJava.demo.Ejercicios.domain;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public abstract class ClasePadreAbstracta {
     protected int transacciones;
@@ -31,18 +32,7 @@ public abstract class ClasePadreAbstracta {
                 }
             } while (bandera == 0);
 
-            if(seleccion==1){
-
-            }else if(seleccion==2){
-
-            }else if(seleccion==3){
-
-            }else if(seleccion==4){
-                System.out.println("------------------------");
-                System.out.println("!Gracias!, vuelva pronto");
-                System.out.println("------------------------");
-                bandera =2;
-            }
+            bandera = getBandera(bandera, seleccion);
 
         }while (bandera!=2);
 
@@ -50,23 +40,48 @@ public abstract class ClasePadreAbstracta {
 
     //Metodo para solicitar cantidad de retiro
 
-    public void Retiro(){
+    public void retiro(){
         this.retiro= entrada.nextInt();
 
     }
 
     //Metodo para solicitar deposito
 
-    public void Deposito(){
+    public void deposito(){
         this.deposito = entrada.nextInt();
     }
 
     //Metodo Abstracto
 
-    public abstract  void Transacciones();
+    public abstract  void transacciones();
 
     //Metodos setter y getter
 
+
+    private int getBandera(int bandera, int seleccion) {
+        ClasePadreAbstracta mensajero;
+        switch (seleccion){
+            case 1:mensajero = new ClaseHijaConsulta();
+                mensajero.transacciones();
+                break;
+            case 2: mensajero = new ClaseHijaRetiro();
+                mensajero.transacciones();
+                break;
+            case 3:mensajero = new ClaseHijaDeposito();
+                mensajero.transacciones();
+                break;
+            case 4:
+                System.out.println("-------------------------");
+                System.out.println("!Gracias!, vuelva pronto");
+                System.out.println("-------------------------");
+                bandera =2;
+                break;
+            default:
+                System.out.println("Ingresaste una opcion no valida");
+                    break;
+        }
+        return bandera;
+    }
 
     public static int getSaldo() {
         return saldo;
