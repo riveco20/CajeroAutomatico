@@ -2,7 +2,6 @@ package com.EjerciciosJava.demo.Ejercicios.domain;
 
 public class ClaseHijaRetiro extends ClasePadreAbstracta {
 
-
     @Override
     public void transacciones() {
         System.out.print("Cuanto deseas retirar: " );

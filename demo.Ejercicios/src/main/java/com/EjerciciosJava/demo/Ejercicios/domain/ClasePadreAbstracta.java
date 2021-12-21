@@ -32,28 +32,7 @@ public abstract class ClasePadreAbstracta {
                 }
             } while (bandera == 0);
 
-<<<<<<< HEAD
             bandera = getBandera(bandera, seleccion);
-=======
-            if(seleccion==1){
-                ClasePadreAbstracta mensajero = new ClaseHijaConsulta();
-                mensajero.Transacciones();
-
-            }else if(seleccion==2){
-                ClasePadreAbstracta mensajero = new ClaseHijaRetiro();
-                mensajero.Transacciones();
-
-            }else if(seleccion==3){
-                ClasePadreAbstracta mensajero = new ClaseHijaDeposito();
-                mensajero.Transacciones();
-
-            }else if(seleccion==4){
-                System.out.println("------------------------");
-                System.out.println("!Gracias!, vuelva pronto");
-                System.out.println("------------------------");
-                bandera =2;
-            }
->>>>>>> 65252804acecc22f3a58498fdd87f491c1bebc0d
 
         }while (bandera!=2);
 
@@ -63,7 +42,6 @@ public abstract class ClasePadreAbstracta {
 
     public void retiro(){
         this.retiro= entrada.nextInt();
-
     }
 
     //Metodo para solicitar deposito
@@ -93,7 +71,7 @@ public abstract class ClasePadreAbstracta {
                 break;
             case 4:
                 System.out.println("-------------------------");
-                System.out.println("!Gracias!, vuelva pronto");
+                System.out.println("!Gracias¡, vuelva pronto");
                 System.out.println("-------------------------");
                 bandera =2;
                 break;
